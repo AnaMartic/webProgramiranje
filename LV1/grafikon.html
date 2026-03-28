@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_graph.css">
+    <title>Document</title>
+</head>
+<body>
+	<header>
+	<h1>Dobrodosli na moju web stranicu</h1>
+	</header>
+	<input type="checkbox" id="menu-toggle">
+	<label for="menu-toggle" class="menu-btn">☰ Menu</label>
+	<nav> <!-- dodati obilježja za ARIA-->
+		<ul>
+    		<li><a href="#">Početna</a></li>
+    		<li><a href="grafikon.html">Grafikoni</a></li>
+    		<li><a href="slike.html">Galerija</a></li>
+    	</ul>
+	</nav>
+
+    <data-chart
+    aria-label="Broj filmova po žanru"
+    id="chart-one"
+    max="5"
+    min="0"
+    options="caption x-labels value-labels y-grid y-labels"
+    role="figure"
+    type="bar">
+
+    <table>
+        <caption>Broj filmova po žanru</caption>
+        <thead aria-hidden="true">
+            <tr><th colspan="2">5</th></tr>
+            <tr><th colspan="2">4</th></tr>
+            <tr><th colspan="2">3</th></tr>
+            <tr><th colspan="2">2</th></tr>
+            <tr><th colspan="2">1</th></tr>
+            <tr><th colspan="2">0</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><th scope="row">Drama</th><td data-v="5">5</td></tr>
+            <tr><th scope="row">Komedija</th><td data-v="5">5</td></tr>
+            <tr><th scope="row">Akcija</th><td data-v="2">2</td></tr>
+            <tr><th scope="row">Animacija</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Romantični</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Krimić</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Triler</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Avantura</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Dokumentarni</th><td data-v="1">1</td></tr>
+            <tr><th scope="row">Horor</th><td data-v="1">1</td></tr>
+        </tbody>
+    </table>
+</data-chart>
+
+	<footer>
+	<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+	</footer>
+</body>
+</html>

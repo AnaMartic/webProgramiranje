@@ -1,0 +1,125 @@
+:root {
+    --bar-color: orange;
+    --bar-hover: red;
+    --bar-width: 40px;
+    --unit: 50px;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+thead {
+    display: none;
+}
+
+tbody {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: calc(var(--unit) * 6);
+    gap: 10px;
+}
+
+tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+td {
+    width: var(--bar-width);
+    background-color: var(--bar-color);
+    text-align: center;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    transition: 0.3s;
+}
+
+td:hover {
+    background-color: var(--bar-hover);
+    transform: scale(1.1);
+}
+
+td[data-v="1"] { height: calc(var(--unit) * 1); }
+td[data-v="2"] { height: calc(var(--unit) * 2); }
+td[data-v="3"] { height: calc(var(--unit) * 3); }
+td[data-v="4"] { height: calc(var(--unit) * 4); }
+td[data-v="5"] { height: calc(var(--unit) * 5); }
+
+th {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+caption {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+nav {
+    display: none;
+    background-color: brown;
+    padding: 20px;
+}
+#menu-toggle {
+    display: none;
+}
+#menu-toggle:checked + .menu-btn + nav {
+    display: block;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    margin: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
